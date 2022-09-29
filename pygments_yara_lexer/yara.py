@@ -13,6 +13,7 @@ class YaraLexer(RegexLexer):
             (r"import", Keyword),
             (r"rule", Keyword),
             (r"(meta:|strings:|condition:)", Keyword),
+            (r"(\Wand\W|\Wor\W)", Keyword),
             (r"\$\w+", Name.Variable),
             (r'"', String.Double, "string_text"),
             (r"/", String.Regex, "string_regexp"),
